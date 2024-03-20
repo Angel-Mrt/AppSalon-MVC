@@ -12,7 +12,7 @@ class LoginController
     }
     public static function logout()
     {
-        echo 'En  Logout';
+        echo 'Desde  Logout';
     }
     public static function olvide(Router $router)
     {
@@ -20,7 +20,7 @@ class LoginController
     }
     public static function recuperar()
     {
-        echo 'En  recuperar';
+        echo 'Desde  recuperar';
     }
     public static function crear(Router $router)
     {
