@@ -1,5 +1,5 @@
 <h1 class="nombre-pagina">Crear Cuenta</h1>
-<p class="descripcion-pagina">Llena el siguiente Formulario para Crear una Cuenta Y Poder Iniciar Sesion</p>
+<p class="descripcion-pagina">Llena el siguiente Formulario para Crear una Cuenta </p>
 
 <form action="/crear-cuenta" class="formulario" method="POST">
     <div class="campo">
