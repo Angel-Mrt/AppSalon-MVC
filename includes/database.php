@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', 'bienesraices_crud');
+$db = mysqli_connect('localhost', 'root', '', 'appSalon_mvc');
 
 
 if (!$db) {

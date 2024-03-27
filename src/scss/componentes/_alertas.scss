@@ -17,7 +17,23 @@
 
     &.exito {
         background-color: v.$verde;
+        
     }
+        &.enlace {
+        background-color: v.$azul;
+        box-shadow: 2px 4px 6px rgba(243, 231, 231, 0.1); /* Sombra del botón */
+
+        &:hover {
+        background-color: #09427e; /* Cambiar el color de fondo al pasar el ratón */
+        border-color: #17ad0f; /* Cambiar el color del borde al pasar el ratón */
+        }
+
+    }
+
+
 }
+
+
+
 
 
