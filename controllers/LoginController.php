@@ -27,6 +27,7 @@ class LoginController
                         // Autenticar el usuario
 
                         //Verificar si no se ha declarado la supera variable SESSION
+                        iniciarSesion();
 
                         $_SESSION['id'] = $usuario->id;
                         $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellido;
