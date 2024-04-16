@@ -22,3 +22,11 @@ function iniciarSesion() {
         session_start();
     }
 }
+
+// Funcion que revisa que el usuario este autenticado
+
+function isAuth() : void{
+    if (!isset($_SESSION['login'])) {
+        header('Location: /');
+    }
+}

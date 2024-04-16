@@ -54,7 +54,11 @@ class LoginController
     }
     public static function logout()
     {
-        echo 'Desde  Logout';
+        //Verificar si no se ha declarado la supera variable SESSION
+        iniciarSesion();
+
+        $_SESSION = [];
+        header('Location: /');
     }
     public static function olvide(Router $router)
     {
