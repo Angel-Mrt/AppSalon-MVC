@@ -11,6 +11,7 @@ class CitaController
     {
         // se manda a llamar la funcion inicarSesion que ejcuta session_start
         iniciarSesion();
+        isAuth();
         $router->render('cita/index', [
             'nombre' => $_SESSION['nombre'],
             'id' => $_SESSION['id']
