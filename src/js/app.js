@@ -296,6 +296,7 @@ function mostrarResumen() {
 
         // Boton para Crear una cita
         const botonReservar = document.createElement('BUTTON');
+        botonReservar.id = 'boton_res';
         botonReservar.classList.add('boton');
         botonReservar.textContent = 'Reservar Cita';
         botonReservar.onclick = reservarCita;
@@ -308,6 +309,7 @@ function mostrarResumen() {
 }
 
 async function reservarCita() {
+    const botonRes = document.querySelector('#boton_res');
     const {id, nombre, fecha, hora, servicios } = cita;
     const idServicios = servicios.map(servicio => servicio.id);
 
@@ -338,8 +340,13 @@ async function reservarCita() {
             }).then(() => {
                 setTimeout(() => {
                     window.location.reload();
-                }, 3000);
+                }, 1500);
             })
+            setTimeout(() => {
+                window.location.reload();
+            }, 10000)
+            botonRes.disabled = true;
+            
         }
 
     } catch (error) {
