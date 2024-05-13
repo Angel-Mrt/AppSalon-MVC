@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+.citas {
+    list-style: none;
+    padding: 0;
+    li{
+        padding: 1rem;
+        border-top: .2rem solid v.$blanco;
+        p{
+            font-weight: v.$bold;
+            color: v.$azul;
+        }
+        h3{
+            text-align: left;
+        }
+        span,
+        .servicio{
+            font-weight: v.$regular;
+            color: v.$blanco;
+        }
+    }
+}
