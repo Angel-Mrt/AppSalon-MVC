@@ -68,3 +68,18 @@
     }
 }
 }
+
+.barra-servicios{
+    margin-bottom: v.$separacion;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        .boton{
+            padding: 1rem;
+        }
+    }
+    .boton{
+        margin: 0 0 1rem 0;
+    }
+}
