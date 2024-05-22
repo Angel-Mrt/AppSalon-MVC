@@ -20,5 +20,11 @@
         padding: calc(v.$separacion / 4);
         border-radius: 1.2rem;
         
+        &:disabled {
+            background-color: lighten(v.$negro, 20%);
+            color: v.$blanco;
+            font-weight: v.$bold;
+            cursor: not-allowed;
+        }
     }
 }

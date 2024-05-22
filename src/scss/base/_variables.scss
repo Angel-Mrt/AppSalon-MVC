@@ -14,6 +14,7 @@ $negro: #1a1b15;
 
 $blanco: #FFFFFF;
 $gris: #e1e1e1;
+$grisM:rgb(175, 175, 175)1;
 
 $separacion: 5rem;
 
@@ -21,4 +22,5 @@ $separacion: 5rem;
 $delgada: 300;
 $regular : 400;
 $bold: 700;
-$black: 900
+$black: 900;
+$punto-suave: 500ms ease-in-out; // Define el tiempo de transición y el easing para un efecto más suave
