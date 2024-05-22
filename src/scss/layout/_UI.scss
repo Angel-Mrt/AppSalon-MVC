@@ -21,6 +21,65 @@
         width: 95%;
         margin: 0 auto;
         padding: 3rem 0;
+        @include m.tablet{
+            overflow: scroll;
+        }
         
+    }
+    .barra {
+    margin: v.$separacion 0;
+    @include m.tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .boton {
+        @include m.boton(v.$negro, v.$blanco);
+        margin: 0; 
+        text-align: left;
+        padding: 1rem .4rem;
+        width: max-content;
+
+        &:hover {
+            background-color: v.$rojo;
+        }
+    }
+
+    p{
+        font-weight: v.$bold;
+        margin: 0; 
+        text-align: left;
+        padding: 1rem .4rem;
+        width: max-content;
+        border-radius: .8rem;
+
+        span{ 
+            color: v.$azul;
+        }
+        &:hover{
+            background-color: v.$gris;
+            color: v.$negro;
+            transition: background-color v.$punto-suave, color v.$punto-suave; // Aplica la transición suave al color de fondo y al color del texto
+        }
+        &:not(:hover) { // Aplica la transición suave cuando el puntero se mueve fuera del elemento
+        transition: background-color v.$punto-suave, color v.$punto-suave;
+    }
+    }
+}
+}
+
+.barra-servicios{
+    margin-bottom: v.$separacion;
+
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+        .boton{
+            padding: 1rem;
+        }
+    }
+    .boton{
+        margin: 0 0 1rem 0;
     }
 }

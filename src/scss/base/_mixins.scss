@@ -43,6 +43,11 @@
         background-color: darken( $bgColor, 10% );
         cursor: pointer;
     }
+    /* Estilos del botón al hacer clic */
+    &:active {
+        transform: translateY(8px); /* Mover el botón ligeramente hacia abajo al hacer clic */
+        box-shadow: none; /* Quitar la sombra al hacer clic */
+    }
 }
 
 @mixin grid($columnas, $espaciado ) {
