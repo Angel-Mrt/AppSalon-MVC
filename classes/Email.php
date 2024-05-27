@@ -43,7 +43,6 @@ class Email
         $contenido .= "<p>Si tu no solicitas esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= "</html>";
         $mail->Body = $contenido;
-
         // Enviar el Email
         $mail->send();
     }
@@ -76,5 +75,6 @@ class Email
 
         // Enviar el Email
         $mail->send();
+        debuguear($mail->send());
     }
 }

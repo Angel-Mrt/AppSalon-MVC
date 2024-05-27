@@ -3,7 +3,7 @@
         'name' => 'angelmrt/appsalon',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'bda3af0772596f04e5578a2bfc5470405855b4d2',
+        'reference' => '50e6cc0b0f32351d4f5c2c444b3c821c4f624d7a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'angelmrt/appsalon' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'bda3af0772596f04e5578a2bfc5470405855b4d2',
+            'reference' => '50e6cc0b0f32351d4f5c2c444b3c821c4f624d7a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
