@@ -6,7 +6,8 @@
 <form method="POST" class="formulario">
     <div class="campo">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Tu Nuevo Password">
+        <input type="password" id="password" name="password" placeholder="Tu Password">
+        <img src="build/img/esconderPass.png" alt="ver/ocultar Password" id="esconder-pass" onclick="verPass()">
     </div>
     <input type="submit" class="boton" value="Reestablecer Password">
 </form>
@@ -15,3 +16,7 @@
     <a href="/">¿Ya tienes cuenta? Inicia Sesion</a>
     <a href="/crear-cuenta">¿Aun no tienes cuenta? Crea Una</a>
 </div>
+
+<?php
+$script = "<script src= 'build/js/verPass.js'></script>"
+?>

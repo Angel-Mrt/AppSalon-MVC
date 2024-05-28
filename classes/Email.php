@@ -75,6 +75,6 @@ class Email
 
         // Enviar el Email
         $mail->send();
-        debuguear($mail->send());
+        //debuguear($mail->send());
     }
 }

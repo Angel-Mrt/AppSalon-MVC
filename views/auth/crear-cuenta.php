@@ -23,6 +23,7 @@
     <div class="campo">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Tu Password">
+        <img src="build/img/esconderPass.png" id="esconder-pass" onclick="verPass()">
     </div>
 
     <input type="submit" value="Crear Cuenta" class=" boton">
@@ -32,3 +33,6 @@
     <a href="/">¿Ya tienes una Cuenta? Inicia Sesión</a>
     <a href="/olvide">¿Olvidaste Tu Password?</a>
 </div>
+<?php
+$script = "<script src= 'build/js/verPass.js'></script>"
+?>

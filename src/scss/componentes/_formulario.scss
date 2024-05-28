@@ -28,4 +28,13 @@
             cursor: not-allowed;
         }
     }
+    img{
+        margin: 1rem;
+        padding: 0;
+        width: 43px;
+        height: 43px;
+        background: v.$negro;
+        border-radius: 1.2rem;
+        cursor: pointer;
+    }
 }

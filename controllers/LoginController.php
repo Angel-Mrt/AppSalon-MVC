@@ -97,31 +97,35 @@ class LoginController
     {
         $alertas = [];
         $error = false;
-        $token = s($_GET['token']);
-        $usuario = Usuario::where('token', $token);
+        if (!isset($_GET['token'])) {
+            header('Location: /');
+        } else {
 
-        if (empty($usuario)) {
-            Usuario::setAlerta('error', 'Token No Válido');
-            $error = true;
-        }
+            $token = s($_GET['token']);
+            $usuario = Usuario::where('token', $token);
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Leer el nuevo password y guardarlo
-            $password = new Usuario($_POST);
-            $alertas = $password->validarPassword();
+            if (empty($usuario)) {
+                Usuario::setAlerta('error', 'Token No Válido');
+                $error = true;
+            }
 
-            if (empty($alertas)) {
-                //$usuario->password = null;
-                $usuario->password = $password->password;
-                $usuario->hashPassword();
-                $usuario->token = null;
-                $resultado = $usuario->guardar();
-                if ($resultado) {
-                    header('Location: /mensajePassword');
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Leer el nuevo password y guardarlo
+                $password = new Usuario($_POST);
+                $alertas = $password->validarPassword();
+
+                if (empty($alertas)) {
+                    //$usuario->password = null;
+                    $usuario->password = $password->password;
+                    $usuario->hashPassword();
+                    $usuario->token = null;
+                    $resultado = $usuario->guardar();
+                    if ($resultado) {
+                        header('Location: /mensajePassword');
+                    }
                 }
             }
         }
-
 
         $alertas = Usuario::getAlertas();
         $router->render('auth/recuperar-password', [
